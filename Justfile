@@ -45,6 +45,7 @@ run-vm $base_dir=base_dir:
         -smp 4 \
         -cpu host \
         -enable-kvm \
+        -device virtio-vga \
         -drive if=pflash,format=qcow2,readonly=on,file=/usr/share/edk2/ovmf/OVMF_CODE_4M.qcow2 \
         -drive file={{base_dir}}/bootable.img,format=raw,if=virtio
 
